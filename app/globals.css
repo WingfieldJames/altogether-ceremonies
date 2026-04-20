@@ -1,0 +1,67 @@
+@import "tailwindcss";
+
+@theme {
+  /* Colour palette */
+  --color-cream: #FAF8F3;
+  --color-stone: #EDE8DC;
+  --color-sage: #7A9E80;
+  --color-sage-dark: #587060;
+  --color-sage-light: #EEF4EF;
+  --color-gold: #C4A05C;
+  --color-gold-dark: #A8854A;
+  --color-gold-light: #D4B870;
+  --color-charcoal: #2C2826;
+  --color-charcoal-mid: #6B6460;
+  --color-charcoal-light: #9A9590;
+
+  /* Typography — populated at runtime by next/font CSS variables */
+  --font-serif: var(--font-playfair), Georgia, "Times New Roman", serif;
+  --font-sans: var(--font-inter), system-ui, sans-serif;
+}
+
+/* ── Base ─────────────────────────────────────────────────────── */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--color-cream);
+  color: var(--color-charcoal);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-serif);
+}
+
+/* ── Scroll-reveal animation ──────────────────────────────────── */
+.reveal {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.7s ease-out, transform 0.7s ease-out;
+}
+
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ── Utilities ────────────────────────────────────────────────── */
+.container-max {
+  max-width: 1200px;
+  margin-inline: auto;
+  padding-inline: 1.5rem;
+}
+
+@media (min-width: 768px) {
+  .container-max {
+    padding-inline: 2.5rem;
+  }
+}

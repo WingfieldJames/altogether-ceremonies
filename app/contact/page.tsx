@@ -314,10 +314,9 @@ export default function ContactPage() {
                       Area Covered
                     </p>
                     <p className="text-sm text-[#6B6460] leading-relaxed">
-                      Based in Surrey, I cover the South East of England
-                      including Sussex, Hampshire, Kent, and London. I&rsquo;m
-                      happy to discuss travel further afield for the right
-                      ceremony.
+                      Based in Surrey, West Sussex and South London. I am happy
+                      to discuss travel further afield if you think I&rsquo;m
+                      the right celebrant for you.
                     </p>
                   </div>
 

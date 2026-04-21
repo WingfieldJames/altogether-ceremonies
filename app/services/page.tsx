@@ -28,7 +28,8 @@ const services = [
       "Personalised vow guidance",
       "Keepsake copy of your ceremony",
     ],
-    image: "/images/jane-9.jpg",
+    image: "/images/jane-13.jpg",
+    aspect: "aspect-[2/3]",
     accent: "#7A9E80",
   },
   {
@@ -49,7 +50,8 @@ const services = [
       "Burial or cremation ceremonies",
       "Memorial services and scattering of ashes ceremonies",
     ],
-    image: "/images/jane-7.jpg",
+    image: "/images/jane-14.jpg",
+    aspect: "aspect-[2/3]",
     accent: "#6B6460",
   },
   {
@@ -148,7 +150,7 @@ export default function ServicesPage() {
             >
               {/* Image */}
               <ScrollReveal>
-                <div className="relative rounded-2xl overflow-hidden shadow-lg aspect-[4/3]">
+                <div className={`relative rounded-2xl overflow-hidden shadow-lg ${service.aspect ?? "aspect-[4/3]"}`}>
                   <Image
                     src={service.image}
                     alt={service.title}

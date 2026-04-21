@@ -77,7 +77,7 @@ export default function Home() {
             </h1>
             <p className="text-[#6B6460] text-lg leading-relaxed mb-10">
               Creating heartfelt, personal celebrations for life&rsquo;s most
-              meaningful moments across Surrey and the South East.
+              meaningful moments across Surrey, West Sussex and South London.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <Link

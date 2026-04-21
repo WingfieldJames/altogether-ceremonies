@@ -326,8 +326,8 @@ export default function ContactPage() {
                     </p>
                     <p className="text-sm text-[#6B6460] leading-relaxed">
                       All initial consultations are free, relaxed, and
-                      completely without obligation. We can meet in person,
-                      over video call, or by phone — whatever works for you.
+                      completely without obligation. We can meet over video
+                      call, or by phone — whatever works for you.
                     </p>
                   </div>
 

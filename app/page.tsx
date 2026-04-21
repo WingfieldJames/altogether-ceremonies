@@ -73,7 +73,7 @@ export default function Home() {
               Jane Wingfield &mdash; Celebrant
             </p>
             <h1 className="font-serif text-5xl md:text-5xl lg:text-6xl text-[#2C2826] leading-tight mb-6">
-              Ceremonies as unique as you are
+              Creating heartfelt, personal celebrations for life&apos;s most meaningful moments across Surrey, West Sussex and South London.
             </h1>
             <p className="text-[#6B6460] text-lg leading-relaxed mb-10">
               Creating heartfelt, personal celebrations for life&rsquo;s most

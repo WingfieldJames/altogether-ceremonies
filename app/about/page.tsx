@@ -10,10 +10,8 @@ export const metadata: Metadata = {
 };
 
 const qualifications = [
-  "Trained celebrant with the Fellowship of Professional Celebrants",
-  "Member of the Society of Civil and Religious Celebrants",
+  "Trained celebrant with the Association of Professional Celebrants",
   "Fully insured and DBS checked",
-  "Experienced across religious and non-religious ceremonies",
   "Based in Surrey, serving the South East",
 ];
 
@@ -104,8 +102,8 @@ export default function AboutPage() {
                 </p>
                 <p className="text-[#6B6460] leading-relaxed mb-5">
                   I trained as a celebrant and began working with families and
-                  couples across Surrey and the South East. What began as a
-                  calling has grown into a practice built on deep listening,
+                  couples across Surrey and the South East. What began as an
+                  interest has grown into a practice built on deep listening,
                   careful words, and an unwavering commitment to honouring each
                   person&rsquo;s unique story.
                 </p>

@@ -14,7 +14,7 @@ const services = [
   {
     title: "Funerals & Memorials",
     description:
-      "A deeply personal tribute that honours a life lived, bringing comfort and meaning to those who grieve.",
+      "A deeply personal tribute that honours a life lived, bringing comfort and meaning.",
     image: "/images/jane-7.jpg",
     href: "/services#funerals",
   },

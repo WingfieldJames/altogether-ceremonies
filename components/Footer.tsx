@@ -53,7 +53,7 @@ export default function Footer() {
             </p>
             <p className="text-sm text-[#9A9590] leading-relaxed">
               Ceremonies as unique as you are. Creating heartfelt, personal
-              celebrations across Surrey and the South East.
+              memories across Surrey and the South East.
             </p>
           </div>
 

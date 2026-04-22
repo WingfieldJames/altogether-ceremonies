@@ -10,7 +10,7 @@ const images = [
   { src: "/images/jane-1.jpg",  alt: "Jane Wingfield, Celebrant", caption: "altogetherceremonies", w: 600, h: 800 },
   { src: "/images/jane-11.jpg", alt: "Jane at an elegant stone venue entrance", caption: "A beautiful setting", w: 600, h: 800 },
   { src: "/images/jane-2.jpg",  alt: "Jane Wingfield, Celebrant", caption: "altogetherceremonies", w: 600, h: 800 },
-  { src: "/images/jane-8.jpg",  alt: "Jane Wingfield, Celebrant portrait", caption: "Jane Wingfield, Celebrant", w: 600, h: 750 },
+  { src: "/images/jane-20.jpg",  alt: "Jane Wingfield, Celebrant portrait", caption: "Jane Wingfield, Celebrant", w: 600, h: 750 },
   { src: "/images/jane-3.jpg",  alt: "Jane Wingfield, Celebrant", caption: "altogetherceremonies", w: 600, h: 800 },
   { src: "/images/jane-10.jpg", alt: "Jane arriving at a venue", caption: "Arriving at the venue", w: 600, h: 800 },
   { src: "/images/jane-4.jpg",  alt: "Jane Wingfield, Celebrant", caption: "altogetherceremonies", w: 600, h: 800 },

@@ -72,6 +72,7 @@ const services = [
       "Keepsake certificate",
     ],
     image: "/images/jane-3.jpg",
+    objectPosition: "50% 20%",
     accent: "#C4A05C",
   },
   {
@@ -156,6 +157,7 @@ export default function ServicesPage() {
                     alt={service.title}
                     fill
                     className="object-cover"
+                    style={service.objectPosition ? { objectPosition: service.objectPosition } : undefined}
                     sizes="(max-width: 768px) 100vw, 50vw"
                   />
                 </div>

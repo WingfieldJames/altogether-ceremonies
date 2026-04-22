@@ -83,15 +83,15 @@ export default function Footer() {
             </p>
             <p className="text-sm text-[#9A9590] mb-1">
               <a
-                href="mailto:jane@altogetherceremonies.co.uk"
+                href="mailto:jfwingfield@gmail.com"
                 className="hover:text-white transition-colors"
               >
-                jane@altogetherceremonies.co.uk
+                jfwingfield@gmail.com
               </a>
             </p>
             <p className="text-sm text-[#9A9590] mb-6">
-              <a href="tel:+447700000000" className="hover:text-white transition-colors">
-                07700 000 000
+              <a href="tel:+447752480665" className="hover:text-white transition-colors">
+                07752 480665
               </a>
             </p>
             <div className="flex gap-4">

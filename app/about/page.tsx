@@ -88,7 +88,7 @@ export default function AboutPage() {
                   My Story
                 </p>
                 <h2 className="font-serif text-3xl md:text-4xl text-[#2C2826] mb-6 leading-snug">
-                  A calling to create
+                  A passion to create
                   <br />
                   meaningful moments
                 </h2>

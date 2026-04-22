@@ -42,8 +42,7 @@ export default function GalleryPage() {
               Moments of Joy
             </h1>
             <p className="text-[#6B6460] text-lg max-w-2xl mx-auto leading-relaxed">
-              A glimpse into some of the ceremonies I&rsquo;ve had the honour
-              of being part of. Each one a story, each one utterly unique.
+              Each ceremony a story, each one utterly unique. I&rsquo;ll prepare and plan so you can remember.
             </p>
           </ScrollReveal>
         </div>

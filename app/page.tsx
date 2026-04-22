@@ -9,7 +9,7 @@ const services = [
       "A ceremony that truly reflects who you are as a couple — your story, your words, your perfect day.",
     image: "/images/jane-9.jpg",
     href: "/services#weddings",
-    objectPosition: "object-top",
+    objectPosition: "object-top -translate-y-[5%]",
   },
   {
     title: "Funerals & Memorials",

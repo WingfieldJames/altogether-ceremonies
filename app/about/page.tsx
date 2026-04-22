@@ -66,7 +66,7 @@ export default function AboutPage() {
             <ScrollReveal>
               <div className="relative rounded-2xl overflow-hidden shadow-lg aspect-[3/4]">
                 <Image
-                  src="/images/jane-8.jpg"
+                  src="/images/jane-18.jpg"
                   alt="Jane Wingfield, Celebrant"
                   fill
                   className="object-cover"

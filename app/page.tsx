@@ -22,7 +22,7 @@ const services = [
     title: "Naming Ceremonies",
     description:
       "A beautiful way to welcome a new life into your family and community, surrounded by those who love them.",
-    image: "/images/jane-10.jpg",
+    image: "/images/jane-17.jpg",
     href: "/services#naming",
   },
   {

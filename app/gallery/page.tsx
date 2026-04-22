@@ -13,7 +13,7 @@ const images = [
   { src: "/images/jane-20.jpg",  alt: "Jane Wingfield, Celebrant portrait", caption: "Jane Wingfield, Celebrant", w: 600, h: 750 },
   { src: "/images/jane-3.jpg",  alt: "Jane Wingfield, Celebrant", caption: "altogetherceremonies", w: 600, h: 800 },
   { src: "/images/jane-10.jpg", alt: "Jane arriving at a venue", caption: "Arriving at the venue", w: 600, h: 800 },
-  { src: "/images/jane-4.jpg",  alt: "Jane Wingfield, Celebrant", caption: "altogetherceremonies", w: 600, h: 800 },
+  { src: "/images/jane-21.jpg",  alt: "Jane Wingfield, Celebrant", caption: "altogetherceremonies", w: 600, h: 800 },
   { src: "/images/jane-7.jpg",  alt: "Jane at Guildford Crematorium", caption: "A moment of quiet dignity", w: 800, h: 600 },
   { src: "/images/jane-5.jpg",  alt: "Jane Wingfield, Celebrant", caption: "altogetherceremonies", w: 600, h: 800 },
   { src: "/images/jane-6.jpg",  alt: "Jane Wingfield, Celebrant", caption: "altogetherceremonies", w: 600, h: 800 },

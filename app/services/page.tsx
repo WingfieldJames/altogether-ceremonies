@@ -71,7 +71,7 @@ const services = [
       "Welcoming promises from family and friends",
       "Keepsake certificate",
     ],
-    image: "/images/jane-10.jpg",
+    image: "/images/jane-3.jpg",
     accent: "#C4A05C",
   },
   {

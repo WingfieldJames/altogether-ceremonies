@@ -16,7 +16,7 @@ const services = [
     subtitle: "Your love story, told your way",
     description: [
       "Your wedding ceremony is the heart of your wedding day — the part that guests will remember long after the music has faded and the cake has been eaten. I believe your ceremony should be a true reflection of your relationship: your shared history, your values, your sense of humour, and your vision for the future.",
-      "As a fully qualified, independent celebrant, I can conduct your ceremony anywhere you choose — a barn, a beach, a beloved garden, or a beautiful venue. I'll guide you through every stage of planning, from our first meeting to the final rehearsal.",
+      "As a fully qualified, independent celebrant, I can conduct your ceremony anywhere you choose — a barn, a beach, a beloved garden, or anywhere really special to you. I'll guide you through every stage of planning, from our first meeting to the final rehearsal.",
       "Whether you want a deeply heartfelt ceremony filled with poetry and personal vows, or something more relaxed and informal with a touch of humour, I will craft something that feels entirely, unmistakably you.",
     ],
     includes: [

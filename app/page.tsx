@@ -99,7 +99,7 @@ export default function Home() {
         {/* Photo — top on mobile, right on desktop */}
         <div className="relative w-full md:w-1/2 aspect-[3/2] md:aspect-auto order-1 md:order-2">
           <Image
-            src="/images/jane-5.jpg"
+            src="/images/jane-15.jpg"
             alt="Jane Wingfield, Celebrant"
             fill
             priority
@@ -116,7 +116,7 @@ export default function Home() {
             <ScrollReveal>
               <div className="relative rounded-2xl overflow-hidden aspect-[4/5] shadow-lg">
                 <Image
-                  src="/images/jane-8.jpg"
+                  src="/images/jane-5.jpg"
                   alt="Jane Wingfield, Celebrant"
                   fill
                   className="object-cover"

@@ -39,7 +39,7 @@ const services = [
     description: [
       "Saying goodbye to someone we love is one of the hardest things we do. A funeral or memorial service is a chance to celebrate a remarkable life, to bring comfort to those who grieve, and to create a shared space for remembrance.",
       "I work with families at what is often an incredibly difficult time, listening carefully and moving gently. Together we will gather the stories, the memories, and the details that made your loved one who they were — and I will weave them into a tribute that truly honours them.",
-      "I offer both traditional and non-religious services, and can incorporate readings, music, and personal rituals that reflect the beliefs and character of the person being celebrated.",
+      "I can incorporate readings, music, and personal rituals that reflect the beliefs and character of the person being celebrated.",
     ],
     includes: [
       "Compassionate, unhurried consultation",

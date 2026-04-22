@@ -9,6 +9,7 @@ const services = [
       "A ceremony that truly reflects who you are as a couple — your story, your words, your perfect day.",
     image: "/images/jane-9.jpg",
     href: "/services#weddings",
+    objectPosition: "object-top",
   },
   {
     title: "Funerals & Memorials",
@@ -183,7 +184,7 @@ export default function Home() {
                         src={service.image}
                         alt={service.title}
                         fill
-                        className="object-cover group-hover:scale-105 transition-transform duration-500"
+                        className={`object-cover group-hover:scale-105 transition-transform duration-500${service.objectPosition ? ` ${service.objectPosition}` : ""}`}
                         sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
                       />
                     </div>

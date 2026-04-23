@@ -22,7 +22,7 @@ export const metadata: Metadata = {
     template: "%s | altogetherceremonies",
   },
   description:
-    "altogetherceremonies — bespoke, heartfelt ceremonies for weddings, funerals, naming ceremonies, vow renewals and life celebrations across Surrey and the South East. Created by celebrant Jane Wingfield.",
+    "altogetherceremonies - bespoke, heartfelt ceremonies for weddings, funerals, naming ceremonies, vow renewals and life celebrations across Surrey and the South East. Created by celebrant Jane Wingfield.",
   keywords: [
     "celebrant",
     "Surrey",

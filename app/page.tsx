@@ -6,7 +6,7 @@ const services = [
   {
     title: "Weddings",
     description:
-      "A ceremony that truly reflects who you are as a couple — your story, your words, your perfect day.",
+      "A ceremony that truly reflects who you are as a couple - your story, your words, your perfect day.",
     image: "/images/jane-9.jpg",
     href: "/services#weddings",
     objectPosition: "object-top -translate-y-[5%]",
@@ -35,7 +35,7 @@ const services = [
   {
     title: "Other Celebrations",
     description:
-      "Life is full of moments worth marking — anniversaries, retirements, coming-of-age, and more.",
+      "Life is full of moments worth marking - anniversaries, retirements, coming-of-age, and more.",
     image: "/images/jane-6.jpg",
     href: "/services#other",
   },
@@ -56,7 +56,7 @@ const testimonials = [
   },
   {
     quote:
-      "Our naming day was magical — friends and family still talk about how special it felt. Jane is wonderful.",
+      "Our naming day was magical - friends and family still talk about how special it felt. Jane is wonderful.",
     name: "Laura & James",
     type: "Naming Ceremony",
   },
@@ -67,7 +67,7 @@ export default function Home() {
     <>
       {/* ── Hero ──────────────────────────────────────────────── */}
       <section className="flex flex-col md:flex-row min-h-screen pt-16 md:pt-20">
-        {/* Text — bottom on mobile, left on desktop */}
+        {/* Text - bottom on mobile, left on desktop */}
         <div className="flex-1 bg-[#FAF8F3] flex items-center justify-center px-8 md:px-14 lg:px-20 py-16 md:py-0 order-2 md:order-1">
           <div className="max-w-lg w-full">
             <p className="text-[#C4A05C] text-xs uppercase tracking-[0.25em] font-medium mb-6">
@@ -97,7 +97,7 @@ export default function Home() {
           </div>
         </div>
 
-        {/* Photo — top on mobile, right on desktop */}
+        {/* Photo - top on mobile, right on desktop */}
         <div className="relative w-full md:w-1/2 aspect-[3/2] md:aspect-auto order-1 md:order-2">
           <Image
             src="/images/jane-15.jpg"
@@ -138,7 +138,7 @@ export default function Home() {
               <p className="text-[#6B6460] leading-relaxed mb-5">
                 I&rsquo;m Jane Wingfield, an independent celebrant based in
                 Surrey. I believe every ceremony should be as individual as the
-                people at its heart — not a template, but a genuine reflection
+                people at its heart - not a template, but a genuine reflection
                 of your values, your relationships, and the moments that define
                 you.
               </p>

@@ -229,7 +229,7 @@ export default function ContactPage() {
                         value={values.message}
                         onChange={handleChange}
                         rows={6}
-                        placeholder="Tell me a little about yourself and your ceremony — I'd love to hear your story..."
+                        placeholder="Tell me a little about yourself and your ceremony - I'd love to hear your story..."
                         className={`${inputClass("message")} resize-none`}
                       />
                       {errors.message && (
@@ -327,7 +327,7 @@ export default function ContactPage() {
                     <p className="text-sm text-[#6B6460] leading-relaxed">
                       All initial consultations are free, relaxed, and
                       completely without obligation. We can meet over video
-                      call, or by phone — whatever works for you.
+                      call, or by phone - whatever works for you.
                     </p>
                   </div>
 

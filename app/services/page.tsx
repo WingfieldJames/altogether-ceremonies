@@ -6,7 +6,7 @@ import ScrollReveal from "@/components/ScrollReveal";
 export const metadata: Metadata = {
   title: "Services",
   description:
-    "Bespoke ceremonies for every occasion — weddings, funerals, naming ceremonies, vow renewals, and more. Jane Wingfield, celebrant in Surrey.",
+    "Bespoke ceremonies for every occasion - weddings, funerals, naming ceremonies, vow renewals, and more. Jane Wingfield, celebrant in Surrey.",
 };
 
 const services = [
@@ -15,8 +15,8 @@ const services = [
     title: "Weddings",
     subtitle: "Your love story, told your way",
     description: [
-      "Your wedding ceremony is the heart of your wedding day — the part that guests will remember long after the music has faded and the cake has been eaten. I believe your ceremony should be a true reflection of your relationship: your shared history, your values, your sense of humour, and your vision for the future.",
-      "As a fully qualified, independent celebrant, I can conduct your ceremony anywhere you choose — a barn, a beach, a beloved garden, or anywhere really special to you. I'll guide you through every stage of planning, from our first meeting to the final rehearsal.",
+      "Your wedding ceremony is the heart of your wedding day - the part that guests will remember long after the music has faded and the cake has been eaten. I believe your ceremony should be a true reflection of your relationship: your shared history, your values, your sense of humour, and your vision for the future.",
+      "As a fully qualified, independent celebrant, I can conduct your ceremony anywhere you choose - a barn, a beach, a beloved garden, or anywhere really special to you. I'll guide you through every stage of planning, from our first meeting to the final rehearsal.",
       "Whether you want a deeply heartfelt ceremony filled with poetry and personal vows, or something more relaxed and informal with a touch of humour, I will craft something that feels entirely, unmistakably you.",
     ],
     includes: [
@@ -38,7 +38,7 @@ const services = [
     subtitle: "A farewell as unique as the life lived",
     description: [
       "Saying goodbye to someone we love is one of the hardest things we do. A funeral or memorial service is a chance to celebrate a remarkable life, to bring comfort to those who grieve, and to create a shared space for remembrance.",
-      "I work with families at what is often an incredibly difficult time, listening carefully and moving gently. Together we will gather the stories, the memories, and the details that made your loved one who they were — and I will weave them into a tribute that truly honours them.",
+      "I work with families at what is often an incredibly difficult time, listening carefully and moving gently. Together we will gather the stories, the memories, and the details that made your loved one who they were - and I will weave them into a tribute that truly honours them.",
       "I can incorporate readings, music, and personal rituals that reflect the beliefs and character of the person being celebrated.",
     ],
     includes: [
@@ -59,9 +59,9 @@ const services = [
     title: "Naming Ceremonies",
     subtitle: "Welcoming a new light into the world",
     description: [
-      "A naming ceremony is a beautiful, inclusive way to formally welcome a child into your family and community — whether you are religious or not, and regardless of your family structure or background.",
+      "A naming ceremony is a beautiful, inclusive way to formally welcome a child into your family and community - whether you are religious or not, and regardless of your family structure or background.",
       "It's a chance to introduce your child to the people who will love and support them throughout their life, to name any guide parents or mentors you have chosen, and to make promises about the upbringing you will provide.",
-      "I'll create a warm and joyful ceremony that celebrates this new arrival and marks the beginning of their story — with personal vows, chosen readings, and any symbolic rituals that feel meaningful to your family.",
+      "I'll create a warm and joyful ceremony that celebrates this new arrival and marks the beginning of their story - with personal vows, chosen readings, and any symbolic rituals that feel meaningful to your family.",
     ],
     includes: [
       "Consultation to learn your family's story",
@@ -80,14 +80,14 @@ const services = [
     title: "Vow Renewals",
     subtitle: "Celebrating the journey so far",
     description: [
-      "A vow renewal is a deeply moving way to celebrate how far you have come together — to look back on the years shared and forward to those still ahead. Whether you are marking a milestone anniversary, celebrating after a period of difficulty, or simply wanting to reaffirm your love surrounded by family and friends, a vow renewal ceremony can be as intimate or as grand as you wish.",
+      "A vow renewal is a deeply moving way to celebrate how far you have come together - to look back on the years shared and forward to those still ahead. Whether you are marking a milestone anniversary, celebrating after a period of difficulty, or simply wanting to reaffirm your love surrounded by family and friends, a vow renewal ceremony can be as intimate or as grand as you wish.",
       "I'll help you reflect on your journey together and craft new vows that speak to who you are now, and all you've become. It's a chance to celebrate your story with fresh eyes.",
     ],
     includes: [
       "Consultation to revisit your story",
       "Updated, personalised vows",
       "Choice of readings and rituals",
-      "Flexible format — intimate or celebratory",
+      "Flexible format - intimate or celebratory",
       "Any location of your choosing",
       "Keepsake copy of your ceremony",
     ],
@@ -99,8 +99,8 @@ const services = [
     title: "Other Celebrations",
     subtitle: "Life is full of moments worth marking",
     description: [
-      "Not every meaningful moment fits neatly into a category. Life is full of milestones that deserve recognition — a significant birthday, a retirement after a long career, a coming-of-age moment, a scattering of ashes, or a blessing for a new home.",
-      "If there is a moment in your life that feels significant and you would like to mark it with intention and ceremony, I would love to help. Get in touch and tell me what you have in mind — I'm always open to creating something new.",
+      "Not every meaningful moment fits neatly into a category. Life is full of milestones that deserve recognition - a significant birthday, a retirement after a long career, a coming-of-age moment, a scattering of ashes, or a blessing for a new home.",
+      "If there is a moment in your life that feels significant and you would like to mark it with intention and ceremony, I would love to help. Get in touch and tell me what you have in mind - I'm always open to creating something new.",
     ],
     includes: [
       "Milestone birthdays (50th, 60th, 70th, 80th…)",
@@ -129,7 +129,7 @@ export default function ServicesPage() {
               Services
             </h1>
             <p className="text-[#6B6460] text-lg max-w-2xl mx-auto leading-relaxed">
-              From your wedding day to a final farewell — every ceremony is
+              From your wedding day to a final farewell - every ceremony is
               planned with care, crafted with love, and delivered with warmth.
             </p>
           </ScrollReveal>

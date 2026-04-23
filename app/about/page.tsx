@@ -19,13 +19,13 @@ const values = [
   {
     title: "Personal",
     description:
-      "I take time to truly understand you — your story, your relationships, what matters most. Every ceremony I write is unique to the people it celebrates.",
+      "I take time to truly understand you - your story, your relationships, what matters most. Every ceremony I write is unique to the people it celebrates.",
     icon: "♡",
   },
   {
     title: "Thoughtful",
     description:
-      "I listen carefully and choose my words with care, crafting language that resonates and moves — never generic, always meaningful.",
+      "I listen carefully and choose my words with care, crafting language that resonates and moves - never generic, always meaningful.",
     icon: "✦",
   },
   {
@@ -51,7 +51,7 @@ export default function AboutPage() {
             </h1>
             <p className="text-[#6B6460] text-lg max-w-2xl mx-auto leading-relaxed">
               Independent celebrant, storyteller, and keeper of life&rsquo;s
-              most meaningful moments — based in Surrey, covering the South East.
+              most meaningful moments - based in Surrey, covering the South East.
             </p>
           </ScrollReveal>
         </div>
@@ -74,11 +74,11 @@ export default function AboutPage() {
               {/* Floating accent card */}
               <div className="mt-6 bg-[#587060] rounded-2xl p-6 text-white">
                 <p className="font-serif text-lg italic leading-relaxed">
-                  &ldquo;A ceremony is not just an event — it is a story told
+                  &ldquo;A ceremony is not just an event - it is a story told
                   aloud, with witnesses who care. I feel honoured to tell those
                   stories.&rdquo;
                 </p>
-                <p className="mt-3 text-sm text-white/70">— Jane Wingfield</p>
+                <p className="mt-3 text-sm text-white/70">- Jane Wingfield</p>
               </div>
             </ScrollReveal>
 
@@ -96,8 +96,8 @@ export default function AboutPage() {
                   For as long as I can remember, I have been drawn to the power
                   of words and the importance of ritual. When a friend asked me
                   to speak at her mother&rsquo;s funeral, something shifted. The
-                  response from the family — the tears, the laughter, the
-                  gratitude — made me realise how much a thoughtfully crafted
+                  response from the family - the tears, the laughter, the
+                  gratitude - made me realise how much a thoughtfully crafted
                   ceremony can mean.
                 </p>
                 <p className="text-[#6B6460] leading-relaxed mb-5">
@@ -108,8 +108,8 @@ export default function AboutPage() {
                   person&rsquo;s unique story.
                 </p>
                 <p className="text-[#6B6460] leading-relaxed mb-8">
-                  I work across all ceremony types — from joyful wedding days to
-                  the most tender farewell services — and I approach every single
+                  I work across all ceremony types - from joyful wedding days to
+                  the most tender farewell services - and I approach every single
                   one with the same care, creativity, and compassion.
                 </p>
               </ScrollReveal>
@@ -185,7 +185,7 @@ export default function AboutPage() {
               {
                 step: "01",
                 title: "Initial Conversation",
-                desc: "We start with a relaxed, no-obligation chat — by phone, video, or in person. I want to hear about you and your hopes for the ceremony.",
+                desc: "We start with a relaxed, no-obligation chat - by phone, video, or in person. I want to hear about you and your hopes for the ceremony.",
               },
               {
                 step: "02",

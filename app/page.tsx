@@ -56,6 +56,10 @@ const testimonials = [
     name: "Sam & Spring",
     type: "Wedding, July 2026",
     span: "md:col-span-3 md:col-start-1",
+    image: "/images/jane-29.jpg",
+    imageAlt: "Jane arriving at a summer wedding venue",
+    imageSide: "right" as const,
+    imageSpan: "md:col-span-1 md:col-start-4",
   },
   {
     quote:
@@ -63,7 +67,20 @@ const testimonials = [
     name: "Melany",
     type: "Colleague",
     span: "md:col-span-3 md:col-start-2",
+    image: "/images/jane-25.jpg",
+    imageAlt: "Jane talking with the photographer before a ceremony",
+    imageSide: "left" as const,
+    imageSpan: "md:col-span-1 md:col-start-1",
   },
+];
+
+// Candid photos from real ceremonies that don't already appear elsewhere on
+// this page, shown as a collage beside the closing call to action.
+const ctaCollage = [
+  { src: "/images/jane-24.jpg", alt: "Jane walking down the aisle at a garden ceremony" },
+  { src: "/images/jane-28.jpg", alt: "Jane handing a reading to a guest at an outdoor ceremony" },
+  { src: "/images/jane-27.jpg", alt: "Jane walking towards the venue entrance" },
+  { src: "/images/jane-26.jpg", alt: "Chairs set out on the lawn for an outdoor ceremony" },
 ];
 
 export default function Home() {
@@ -227,26 +244,46 @@ export default function Home() {
           </ScrollReveal>
 
           <div className="grid md:grid-cols-4 gap-8">
-            {testimonials.map((t, i) => (
-              <ScrollReveal key={t.name} delay={i * 100} className={t.span}>
-                <div className="bg-[#EDE8DC]/40 rounded-2xl p-8 h-full flex flex-col">
-                  <svg
-                    className="w-8 h-8 text-[#C4A05C] mb-4 flex-shrink-0"
-                    fill="currentColor"
-                    viewBox="0 0 32 32"
-                  >
-                    <path d="M10 8C6.686 8 4 10.686 4 14v10h10V14H7.333C7.333 11.791 8.791 10 11 10L10 8zm14 0c-3.314 0-6 2.686-6 6v10h10V14h-6.667C21.333 11.791 22.791 10 25 10L24 8z" />
-                  </svg>
-                  <p className="text-[#2C2826] leading-relaxed italic flex-1">
-                    &ldquo;{t.quote}&rdquo;
-                  </p>
-                  <div className="mt-6 pt-4 border-t border-[#EDE8DC]">
-                    <p className="font-medium text-[#2C2826] text-sm">{t.name}</p>
-                    <p className="text-xs text-[#7A9E80] mt-0.5">{t.type}</p>
+            {testimonials.map((t, i) => {
+              const quote = (
+                <ScrollReveal key={`${t.name}-quote`} delay={i * 100} className={t.span}>
+                  <div className="bg-[#EDE8DC]/40 rounded-2xl p-8 h-full flex flex-col">
+                    <svg
+                      className="w-8 h-8 text-[#C4A05C] mb-4 flex-shrink-0"
+                      fill="currentColor"
+                      viewBox="0 0 32 32"
+                    >
+                      <path d="M10 8C6.686 8 4 10.686 4 14v10h10V14H7.333C7.333 11.791 8.791 10 11 10L10 8zm14 0c-3.314 0-6 2.686-6 6v10h10V14h-6.667C21.333 11.791 22.791 10 25 10L24 8z" />
+                    </svg>
+                    <p className="text-[#2C2826] leading-relaxed italic flex-1">
+                      &ldquo;{t.quote}&rdquo;
+                    </p>
+                    <div className="mt-6 pt-4 border-t border-[#EDE8DC]">
+                      <p className="font-medium text-[#2C2826] text-sm">{t.name}</p>
+                      <p className="text-xs text-[#7A9E80] mt-0.5">{t.type}</p>
+                    </div>
                   </div>
-                </div>
-              </ScrollReveal>
-            ))}
+                </ScrollReveal>
+              );
+
+              const photo = (
+                <ScrollReveal key={`${t.name}-photo`} delay={i * 100 + 80} className={t.imageSpan}>
+                  <div className="relative h-full min-h-[300px] rounded-2xl overflow-hidden shadow-sm">
+                    <Image
+                      src={t.image}
+                      alt={t.imageAlt}
+                      fill
+                      className="object-cover"
+                      sizes="(max-width: 768px) 100vw, 25vw"
+                    />
+                  </div>
+                </ScrollReveal>
+              );
+
+              // Emit in visual order - grid auto-placement only moves forward,
+              // so the left-hand item has to come first.
+              return t.imageSide === "left" ? [photo, quote] : [quote, photo];
+            })}
           </div>
 
         </div>
@@ -254,27 +291,48 @@ export default function Home() {
 
       {/* ── CTA Banner ────────────────────────────────────────── */}
       <section className="py-24 bg-[#587060]">
-        <div className="container-max text-center">
-          <ScrollReveal>
-            <p className="text-[#C4A05C] text-sm uppercase tracking-[0.2em] font-medium mb-4">
-              Let&rsquo;s begin
-            </p>
-            <h2 className="font-serif text-4xl md:text-5xl text-white mb-6 leading-snug">
-              Ready to create something
-              <br />
-              truly special?
-            </h2>
-            <p className="text-white/75 text-lg max-w-lg mx-auto mb-10">
-              Get in touch today for a free, no-obligation conversation about
-              your ceremony. I&rsquo;d love to hear your story.
-            </p>
-            <Link
-              href="/contact"
-              className="inline-block px-10 py-4 bg-[#C4A05C] text-white font-medium rounded-full hover:bg-[#A8854A] transition-colors"
-            >
-              Contact Jane
-            </Link>
-          </ScrollReveal>
+        <div className="container-max">
+          <div className="grid md:grid-cols-2 gap-12 lg:gap-16 items-center">
+            {/* Copy */}
+            <ScrollReveal className="text-center md:text-left">
+              <p className="text-[#C4A05C] text-sm uppercase tracking-[0.2em] font-medium mb-4">
+                Let&rsquo;s begin
+              </p>
+              <h2 className="font-serif text-4xl md:text-5xl text-white mb-6 leading-snug">
+                Ready to create something truly special?
+              </h2>
+              <p className="text-white/75 text-lg max-w-lg mx-auto md:mx-0 mb-10">
+                Get in touch today for a free, no-obligation conversation about
+                your ceremony. I&rsquo;d love to hear your story.
+              </p>
+              <Link
+                href="/contact"
+                className="inline-block px-10 py-4 bg-[#C4A05C] text-white font-medium rounded-full hover:bg-[#A8854A] transition-colors"
+              >
+                Get in touch by WhatsApp
+              </Link>
+            </ScrollReveal>
+
+            {/* Collage */}
+            <ScrollReveal delay={150}>
+              <div className="grid grid-cols-2 gap-4">
+                {ctaCollage.map((img) => (
+                  <div
+                    key={img.src}
+                    className="relative aspect-[3/4] rounded-2xl overflow-hidden shadow-lg"
+                  >
+                    <Image
+                      src={img.src}
+                      alt={img.alt}
+                      fill
+                      className="object-cover"
+                      sizes="(max-width: 768px) 45vw, 22vw"
+                    />
+                  </div>
+                ))}
+              </div>
+            </ScrollReveal>
+          </div>
         </div>
       </section>
     </>

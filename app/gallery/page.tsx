@@ -5,13 +5,16 @@ import Image from "next/image";
 import ScrollReveal from "@/components/ScrollReveal";
 
 const images = [
+  { src: "/images/jane-25.jpg", alt: "Jane talking with the photographer before a ceremony", caption: "Working with the photographer", w: 600, h: 800 },
   { src: "/images/jane-12.jpg", alt: "Jane Wingfield at an outdoor ceremony", caption: "Ready for the ceremony", w: 600, h: 800 },
+  { src: "/images/jane-22.jpg", alt: "A couple kissing at the end of their outdoor wedding ceremony", caption: "Just married", w: 847, h: 640 },
   { src: "/images/jane-9.jpg",  alt: "Jane performing a ceremony with flowers", caption: "Celebrating love", w: 600, h: 800 },
   { src: "/images/jane-24.jpg", alt: "Jane walking down the aisle at a garden ceremony", caption: "Before the ceremony", w: 600, h: 800 },
   { src: "/images/jane-1.jpg",  alt: "Jane Wingfield, Celebrant", caption: "altogetherceremonies", w: 600, h: 800 },
   { src: "/images/jane-11.jpg", alt: "Jane at an elegant stone venue entrance", caption: "A beautiful setting", w: 600, h: 800 },
-  { src: "/images/jane-25.jpg", alt: "Jane talking with the photographer before a ceremony", caption: "Working with the photographer", w: 600, h: 800 },
+  { src: "/images/jane-23.jpg", alt: "Jane planning a ceremony with a client", caption: "Planning together", w: 800, h: 600 },
   { src: "/images/jane-2.jpg",  alt: "Jane Wingfield, Celebrant", caption: "altogetherceremonies", w: 600, h: 800 },
+  { src: "/images/jane-28.jpg", alt: "Jane handing a reading to a guest at an outdoor ceremony", caption: "Sharing a reading", w: 560, h: 738 },
   { src: "/images/jane-20.jpg",  alt: "Jane Wingfield, Celebrant portrait", caption: "Jane Wingfield, Celebrant", w: 600, h: 750 },
   { src: "/images/jane-3.jpg",  alt: "Jane Wingfield, Celebrant", caption: "altogetherceremonies", w: 600, h: 800 },
   { src: "/images/jane-27.jpg", alt: "Jane walking towards the venue entrance", caption: "A summer wedding", w: 600, h: 800 },

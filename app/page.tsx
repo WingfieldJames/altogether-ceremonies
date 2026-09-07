@@ -44,9 +44,9 @@ const services = [
 const testimonials = [
   {
     quote:
-      "Jane created the most beautiful ceremony for us. Every word felt like it was written just for our relationship.",
-    name: "Sophie & Tom",
-    type: "Wedding",
+      "Jane is simply a wonderful person - kind, thoughtful, warm, and genuinely caring, with a natural ability to connect with others. She is someone you can trust to handle important moments with grace, sincerity, and professionalism. Jane is ideally suited to the role of a celebrant, and I have no doubt that she will leave a lasting, positive impression on all those she works with.",
+    name: "Melany",
+    type: "Personal Reference",
   },
   {
     quote:

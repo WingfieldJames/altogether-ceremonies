@@ -1,83 +1,11 @@
-"use client";
-
-import { useState } from "react";
 import Link from "next/link";
 import ScrollReveal from "@/components/ScrollReveal";
 
-const ceremonyTypes = [
-  "Wedding",
-  "Funeral / Memorial Service",
-  "Naming Ceremony",
-  "Vow Renewal",
-  "Other Celebration",
-  "Not sure yet",
-];
-
-type FormState = "idle" | "loading" | "success" | "error";
+const WHATSAPP_LINK =
+  "https://wa.me/447752480665?text=Hi%20Jane%2C%20I%27d%20love%20to%20chat%20about%20a%20ceremony.";
+const INSTAGRAM_DM_LINK = "https://ig.me/m/altogetherceremonies";
 
 export default function ContactPage() {
-  const [formState, setFormState] = useState<FormState>("idle");
-  const [errors, setErrors] = useState<Record<string, string>>({});
-  const [values, setValues] = useState({
-    name: "",
-    email: "",
-    phone: "",
-    ceremonyType: "",
-    preferredDate: "",
-    message: "",
-  });
-
-  const validate = () => {
-    const errs: Record<string, string> = {};
-    if (!values.name.trim()) errs.name = "Please enter your name.";
-    if (!values.email.trim()) errs.email = "Please enter your email.";
-    else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(values.email))
-      errs.email = "Please enter a valid email address.";
-    if (!values.message.trim()) errs.message = "Please add a message.";
-    return errs;
-  };
-
-  const handleChange = (
-    e: React.ChangeEvent<
-      HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement
-    >
-  ) => {
-    const { name, value } = e.target;
-    setValues((v) => ({ ...v, [name]: value }));
-    if (errors[name]) setErrors((e) => ({ ...e, [name]: "" }));
-  };
-
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    const errs = validate();
-    if (Object.keys(errs).length > 0) {
-      setErrors(errs);
-      return;
-    }
-    setFormState("loading");
-    try {
-      const res = await fetch("/api/contact", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(values),
-      });
-      if (res.ok) {
-        setFormState("success");
-      } else {
-        setFormState("error");
-      }
-    } catch {
-      setFormState("error");
-    }
-  };
-
-  const inputClass = (field: string) =>
-    `w-full px-4 py-3 bg-white border rounded-xl text-sm text-[#2C2826] placeholder-[#9A9590] focus:outline-none focus:ring-2 transition-colors ${
-      errors[field]
-        ? "border-red-400 focus:ring-red-200"
-        : "border-[#EDE8DC] focus:ring-[#7A9E80]/30 focus:border-[#7A9E80]"
-    }`;
-
   return (
     <>
       {/* ── Hero ──────────────────────────────────────────────── */}
@@ -98,180 +26,73 @@ export default function ContactPage() {
         </div>
       </section>
 
-      {/* ── Form + Info ───────────────────────────────────────── */}
+      {/* ── Message + Info ────────────────────────────────────── */}
       <section className="py-24 bg-[#FAF8F3]">
         <div className="container-max">
           <div className="grid md:grid-cols-5 gap-14 items-start">
-            {/* Form */}
+            {/* Message me */}
             <div className="md:col-span-3">
               <ScrollReveal>
-                {formState === "success" ? (
-                  <div className="bg-[#EEF4EF] border border-[#7A9E80]/30 rounded-2xl p-10 text-center">
-                    <div className="w-16 h-16 rounded-full bg-[#7A9E80]/20 flex items-center justify-center mx-auto mb-5">
-                      <svg className="w-8 h-8 text-[#7A9E80]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                <h2 className="font-serif text-3xl text-[#2C2826] mb-4">
+                  Send me a message
+                </h2>
+                <p className="text-[#6B6460] leading-relaxed mb-8 max-w-lg">
+                  The easiest way to reach me is a quick message - tell me a
+                  little about yourself and your ceremony, and I&rsquo;ll come
+                  back to you personally.
+                </p>
+
+                <div className="space-y-4 max-w-lg">
+                  <a
+                    href={WHATSAPP_LINK}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center gap-4 w-full px-6 py-5 bg-[#7A9E80] text-white rounded-2xl hover:bg-[#587060] transition-colors group"
+                  >
+                    <span className="w-11 h-11 rounded-full bg-white/15 flex items-center justify-center flex-shrink-0">
+                      <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.71.306 1.263.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z" />
                       </svg>
-                    </div>
-                    <h2 className="font-serif text-2xl text-[#2C2826] mb-3">
-                      Thank you for reaching out
-                    </h2>
-                    <p className="text-[#6B6460] text-sm leading-relaxed max-w-sm mx-auto">
-                      I&rsquo;ve received your message and will be in touch
-                      within 48 hours. I look forward to hearing more about
-                      your ceremony.
-                    </p>
-                    <button
-                      onClick={() => {
-                        setFormState("idle");
-                        setValues({ name: "", email: "", phone: "", ceremonyType: "", preferredDate: "", message: "" });
-                      }}
-                      className="mt-6 text-sm text-[#7A9E80] hover:text-[#587060] transition-colors font-medium"
-                    >
-                      Send another message
-                    </button>
-                  </div>
-                ) : (
-                  <form onSubmit={handleSubmit} noValidate className="space-y-5">
-                    <div className="grid sm:grid-cols-2 gap-5">
-                      <div>
-                        <label className="block text-xs font-medium text-[#2C2826] mb-1.5 uppercase tracking-wide">
-                          Full Name <span className="text-[#C4A05C]">*</span>
-                        </label>
-                        <input
-                          type="text"
-                          name="name"
-                          value={values.name}
-                          onChange={handleChange}
-                          placeholder="Jane Smith"
-                          className={inputClass("name")}
-                          autoComplete="name"
-                        />
-                        {errors.name && (
-                          <p className="mt-1 text-xs text-red-500">{errors.name}</p>
-                        )}
-                      </div>
+                    </span>
+                    <span className="flex-1">
+                      <span className="block font-medium">WhatsApp me</span>
+                      <span className="block text-sm text-white/75">
+                        Usually the quickest way to get a reply
+                      </span>
+                    </span>
+                    <svg className="w-5 h-5 flex-shrink-0 opacity-60 group-hover:opacity-100 group-hover:translate-x-0.5 transition-all" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                    </svg>
+                  </a>
 
-                      <div>
-                        <label className="block text-xs font-medium text-[#2C2826] mb-1.5 uppercase tracking-wide">
-                          Email <span className="text-[#C4A05C]">*</span>
-                        </label>
-                        <input
-                          type="email"
-                          name="email"
-                          value={values.email}
-                          onChange={handleChange}
-                          placeholder="jane@example.com"
-                          className={inputClass("email")}
-                          autoComplete="email"
-                        />
-                        {errors.email && (
-                          <p className="mt-1 text-xs text-red-500">{errors.email}</p>
-                        )}
-                      </div>
-                    </div>
+                  <a
+                    href={INSTAGRAM_DM_LINK}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center gap-4 w-full px-6 py-5 bg-white border border-[#EDE8DC] text-[#2C2826] rounded-2xl hover:border-[#7A9E80] transition-colors group"
+                  >
+                    <span className="w-11 h-11 rounded-full bg-[#EEF4EF] flex items-center justify-center flex-shrink-0 text-[#7A9E80]">
+                      <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                        <path fillRule="evenodd" d="M12.315 2c2.43 0 2.784.013 3.808.06 1.064.049 1.791.218 2.427.465a4.902 4.902 0 011.772 1.153 4.902 4.902 0 011.153 1.772c.247.636.416 1.363.465 2.427.048 1.067.06 1.407.06 4.123v.08c0 2.643-.012 2.987-.06 4.043-.049 1.064-.218 1.791-.465 2.427a4.902 4.902 0 01-1.153 1.772 4.902 4.902 0 01-1.772 1.153c-.636.247-1.363.416-2.427.465-1.067.048-1.407.06-4.123.06h-.08c-2.643 0-2.987-.012-4.043-.06-1.064-.049-1.791-.218-2.427-.465a4.902 4.902 0 01-1.772-1.153 4.902 4.902 0 01-1.153-1.772c-.247-.636-.416-1.363-.465-2.427-.047-1.024-.06-1.379-.06-3.808v-.63c0-2.43.013-2.784.06-3.808.049-1.064.218-1.791.465-2.427a4.902 4.902 0 011.153-1.772A4.902 4.902 0 015.45 2.525c.636-.247 1.363-.416 2.427-.465C8.901 2.013 9.256 2 11.685 2h.63zm-.081 1.802h-.468c-2.456 0-2.784.011-3.807.058-.975.045-1.504.207-1.857.344-.467.182-.8.398-1.15.748-.35.35-.566.683-.748 1.15-.137.353-.3.882-.344 1.857-.047 1.023-.058 1.351-.058 3.807v.468c0 2.456.011 2.784.058 3.807.045.975.207 1.504.344 1.857.182.466.399.8.748 1.15.35.35.683.566 1.15.748.353.137.882.3 1.857.344 1.054.048 1.37.058 4.041.058h.08c2.597 0 2.917-.01 3.96-.058.976-.045 1.505-.207 1.858-.344.466-.182.8-.398 1.15-.748.35-.35.566-.683.748-1.15.137-.353.3-.882.344-1.857.048-1.055.058-1.37.058-4.041v-.08c0-2.597-.01-2.917-.058-3.96-.045-.976-.207-1.505-.344-1.858a3.097 3.097 0 00-.748-1.15 3.098 3.098 0 00-1.15-.748c-.353-.137-.882-.3-1.857-.344-1.023-.047-1.351-.058-3.807-.058zM12 6.865a5.135 5.135 0 110 10.27 5.135 5.135 0 010-10.27zm0 1.802a3.333 3.333 0 100 6.666 3.333 3.333 0 000-6.666zm5.338-3.205a1.2 1.2 0 110 2.4 1.2 1.2 0 010-2.4z" clipRule="evenodd" />
+                      </svg>
+                    </span>
+                    <span className="flex-1">
+                      <span className="block font-medium">
+                        Message me on Instagram
+                      </span>
+                      <span className="block text-sm text-[#9A9590]">
+                        Send a DM to @altogetherceremonies
+                      </span>
+                    </span>
+                    <svg className="w-5 h-5 flex-shrink-0 text-[#9A9590] group-hover:text-[#7A9E80] group-hover:translate-x-0.5 transition-all" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                    </svg>
+                  </a>
+                </div>
 
-                    <div className="grid sm:grid-cols-2 gap-5">
-                      <div>
-                        <label className="block text-xs font-medium text-[#2C2826] mb-1.5 uppercase tracking-wide">
-                          Phone Number
-                        </label>
-                        <input
-                          type="tel"
-                          name="phone"
-                          value={values.phone}
-                          onChange={handleChange}
-                          placeholder="07700 000 000"
-                          className={inputClass("phone")}
-                          autoComplete="tel"
-                        />
-                      </div>
-
-                      <div>
-                        <label className="block text-xs font-medium text-[#2C2826] mb-1.5 uppercase tracking-wide">
-                          Ceremony Type
-                        </label>
-                        <select
-                          name="ceremonyType"
-                          value={values.ceremonyType}
-                          onChange={handleChange}
-                          className={inputClass("ceremonyType")}
-                        >
-                          <option value="">Select a type...</option>
-                          {ceremonyTypes.map((t) => (
-                            <option key={t} value={t}>
-                              {t}
-                            </option>
-                          ))}
-                        </select>
-                      </div>
-                    </div>
-
-                    <div>
-                      <label className="block text-xs font-medium text-[#2C2826] mb-1.5 uppercase tracking-wide">
-                        Preferred / Approximate Date
-                      </label>
-                      <input
-                        type="date"
-                        name="preferredDate"
-                        value={values.preferredDate}
-                        onChange={handleChange}
-                        className={inputClass("preferredDate")}
-                        min={new Date().toISOString().split("T")[0]}
-                      />
-                    </div>
-
-                    <div>
-                      <label className="block text-xs font-medium text-[#2C2826] mb-1.5 uppercase tracking-wide">
-                        Your Message <span className="text-[#C4A05C]">*</span>
-                      </label>
-                      <textarea
-                        name="message"
-                        value={values.message}
-                        onChange={handleChange}
-                        rows={6}
-                        placeholder="Tell me a little about yourself and your ceremony - I'd love to hear your story..."
-                        className={`${inputClass("message")} resize-none`}
-                      />
-                      {errors.message && (
-                        <p className="mt-1 text-xs text-red-500">{errors.message}</p>
-                      )}
-                    </div>
-
-                    {formState === "error" && (
-                      <div className="p-4 bg-red-50 border border-red-200 rounded-xl text-sm text-red-600">
-                        Something went wrong. Please try again or email me directly at{" "}
-                        <a
-                          href="mailto:jfwingfield@gmail.com"
-                          className="underline"
-                        >
-                          jfwingfield@gmail.com
-                        </a>
-                      </div>
-                    )}
-
-                    <button
-                      type="submit"
-                      disabled={formState === "loading"}
-                      className="w-full py-4 bg-[#7A9E80] text-white font-medium rounded-full hover:bg-[#587060] transition-colors disabled:opacity-70 disabled:cursor-not-allowed flex items-center justify-center gap-2"
-                    >
-                      {formState === "loading" ? (
-                        <>
-                          <svg className="w-4 h-4 animate-spin" fill="none" viewBox="0 0 24 24">
-                            <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4" />
-                            <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4z" />
-                          </svg>
-                          Sending…
-                        </>
-                      ) : (
-                        "Send Message"
-                      )}
-                    </button>
-
-                    <p className="text-xs text-[#9A9590] text-center">
-                      I aim to respond within 48 hours.
-                    </p>
-                  </form>
-                )}
+                <p className="text-xs text-[#9A9590] mt-6">
+                  I aim to respond within 48 hours.
+                </p>
               </ScrollReveal>
             </div>
 

@@ -30,7 +30,7 @@ const services: Service[] = [
     title: "Naming Ceremonies",
     description:
       "A beautiful way to welcome a new life into your family and community, surrounded by those who love them.",
-    image: "/images/jane-17.jpg",
+    image: "/images/jane-23.jpg",
     href: "/services#naming",
   },
   {
@@ -44,7 +44,7 @@ const services: Service[] = [
     title: "Other Celebrations",
     description:
       "Life is full of moments worth marking - anniversaries, retirements, coming-of-age, and more.",
-    image: "/images/jane-23.jpg",
+    image: "/images/jane-17.jpg",
     href: "/services#other",
   },
 ];
@@ -61,7 +61,7 @@ const testimonials = [
     quote:
       "Jane is simply a wonderful person - kind, thoughtful, warm, and genuinely caring, with a natural ability to connect with others. She is someone you can trust to handle important moments with grace, sincerity, and professionalism. Jane is ideally suited to the role of a celebrant, and I have no doubt that she will leave a lasting, positive impression on all those she works with.",
     name: "Melany",
-    type: "Personal Reference",
+    type: "Colleague",
     span: "md:col-span-3 md:col-start-2",
   },
 ];

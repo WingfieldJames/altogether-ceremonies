@@ -2,14 +2,22 @@ import Image from "next/image";
 import Link from "next/link";
 import ScrollReveal from "@/components/ScrollReveal";
 
-const services = [
+type Service = {
+  title: string;
+  description: string;
+  image: string;
+  href: string;
+  /** Optional Tailwind object-position utilities, for photos that need a custom crop. */
+  objectPosition?: string;
+};
+
+const services: Service[] = [
   {
     title: "Weddings",
     description:
       "A ceremony that truly reflects who you are as a couple - your story, your words, your perfect day.",
-    image: "/images/jane-9.jpg",
+    image: "/images/jane-22.jpg",
     href: "/services#weddings",
-    objectPosition: "object-top -translate-y-[5%]",
   },
   {
     title: "Funerals & Memorials",
@@ -36,8 +44,7 @@ const services = [
     title: "Other Celebrations",
     description:
       "Life is full of moments worth marking - anniversaries, retirements, coming-of-age, and more.",
-    image: "/images/jane-6.jpg",
-    objectPosition: "object-top",
+    image: "/images/jane-23.jpg",
     href: "/services#other",
   },
 ];

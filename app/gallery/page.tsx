@@ -7,14 +7,18 @@ import ScrollReveal from "@/components/ScrollReveal";
 const images = [
   { src: "/images/jane-12.jpg", alt: "Jane Wingfield at an outdoor ceremony", caption: "Ready for the ceremony", w: 600, h: 800 },
   { src: "/images/jane-9.jpg",  alt: "Jane performing a ceremony with flowers", caption: "Celebrating love", w: 600, h: 800 },
+  { src: "/images/jane-24.jpg", alt: "Jane walking down the aisle at a garden ceremony", caption: "Before the ceremony", w: 600, h: 800 },
   { src: "/images/jane-1.jpg",  alt: "Jane Wingfield, Celebrant", caption: "altogetherceremonies", w: 600, h: 800 },
   { src: "/images/jane-11.jpg", alt: "Jane at an elegant stone venue entrance", caption: "A beautiful setting", w: 600, h: 800 },
+  { src: "/images/jane-25.jpg", alt: "Jane talking with the photographer before a ceremony", caption: "Working with the photographer", w: 600, h: 800 },
   { src: "/images/jane-2.jpg",  alt: "Jane Wingfield, Celebrant", caption: "altogetherceremonies", w: 600, h: 800 },
   { src: "/images/jane-20.jpg",  alt: "Jane Wingfield, Celebrant portrait", caption: "Jane Wingfield, Celebrant", w: 600, h: 750 },
   { src: "/images/jane-3.jpg",  alt: "Jane Wingfield, Celebrant", caption: "altogetherceremonies", w: 600, h: 800 },
+  { src: "/images/jane-27.jpg", alt: "Jane walking towards the venue entrance", caption: "A summer wedding", w: 600, h: 800 },
   { src: "/images/jane-10.jpg", alt: "Jane arriving at a venue", caption: "Arriving at the venue", w: 600, h: 800 },
   { src: "/images/jane-21.jpg",  alt: "Jane Wingfield, Celebrant", caption: "altogetherceremonies", w: 600, h: 800 },
   { src: "/images/jane-7.jpg",  alt: "Jane at Guildford Crematorium", caption: "A moment of quiet dignity", w: 800, h: 600 },
+  { src: "/images/jane-26.jpg", alt: "Chairs set out on the lawn for an outdoor ceremony", caption: "Set and ready", w: 600, h: 800 },
   { src: "/images/jane-5.jpg",  alt: "Jane Wingfield, Celebrant", caption: "altogetherceremonies", w: 600, h: 800 },
   { src: "/images/jane-6.jpg",  alt: "Jane Wingfield, Celebrant", caption: "altogetherceremonies", w: 600, h: 800 },
 ];

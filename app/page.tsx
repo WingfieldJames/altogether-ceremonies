@@ -45,21 +45,17 @@ const services = [
 const testimonials = [
   {
     quote:
+      "I just wanted to say thank you so much for everything. I smile every time I think about the ceremony you performed for us and how warm and wonderful it was. You made the whole ceremony feel so personal, relaxed and full of love, and it really was everything we could have hoped for. We honestly couldn't have asked for a lovelier person to be part of such an important moment for us. Sam and I always speak so warmly about you, and we both feel incredibly lucky that you were the one who married us.",
+    name: "Sam & Spring",
+    type: "Wedding, July 2026",
+    span: "md:col-span-3 md:col-start-1",
+  },
+  {
+    quote:
       "Jane is simply a wonderful person - kind, thoughtful, warm, and genuinely caring, with a natural ability to connect with others. She is someone you can trust to handle important moments with grace, sincerity, and professionalism. Jane is ideally suited to the role of a celebrant, and I have no doubt that she will leave a lasting, positive impression on all those she works with.",
     name: "Melany",
     type: "Personal Reference",
-  },
-  {
-    quote:
-      "She guided us through a really difficult time with such warmth and grace. The service was perfect for Mum.",
-    name: "The Harrison Family",
-    type: "Funeral",
-  },
-  {
-    quote:
-      "Our naming day was magical - friends and family still talk about how special it felt. Jane is wonderful.",
-    name: "Laura & James",
-    type: "Naming Ceremony",
+    span: "md:col-span-3 md:col-start-2",
   },
 ];
 
@@ -223,9 +219,9 @@ export default function Home() {
             </h2>
           </ScrollReveal>
 
-          <div className="grid md:grid-cols-3 gap-8">
+          <div className="grid md:grid-cols-4 gap-8">
             {testimonials.map((t, i) => (
-              <ScrollReveal key={t.name} delay={i * 100}>
+              <ScrollReveal key={t.name} delay={i * 100} className={t.span}>
                 <div className="bg-[#EDE8DC]/40 rounded-2xl p-8 h-full flex flex-col">
                   <svg
                     className="w-8 h-8 text-[#C4A05C] mb-4 flex-shrink-0"

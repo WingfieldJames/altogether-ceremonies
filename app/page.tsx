@@ -37,6 +37,7 @@ const services = [
     description:
       "Life is full of moments worth marking - anniversaries, retirements, coming-of-age, and more.",
     image: "/images/jane-6.jpg",
+    objectPosition: "object-top",
     href: "/services#other",
   },
 ];

@@ -111,6 +111,7 @@ const services = [
       "New home blessings",
     ],
     image: "/images/jane-6.jpg",
+    objectPosition: "50% 0%",
     accent: "#C4A05C",
   },
 ];

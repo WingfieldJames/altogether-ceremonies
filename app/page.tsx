@@ -5,7 +5,8 @@ import ScrollReveal from "@/components/ScrollReveal";
 type Service = {
   title: string;
   description: string;
-  image: string;
+  /** Omit for a text-only card. */
+  image?: string;
   href: string;
   /** Optional Tailwind object-position utilities, for photos that need a custom crop. */
   objectPosition?: string;
@@ -37,14 +38,12 @@ const services: Service[] = [
     title: "Vow Renewals",
     description:
       "Celebrate your journey together and reaffirm your commitment in a ceremony as meaningful as your first.",
-    image: "/images/jane-11.jpg",
     href: "/services#vow-renewals",
   },
   {
     title: "Other Celebrations",
     description:
       "Life is full of moments worth marking - anniversaries, retirements, coming-of-age, and more.",
-    image: "/images/jane-17.jpg",
     href: "/services#other",
   },
 ];
@@ -76,11 +75,15 @@ const testimonials = [
 
 // Candid photos from real ceremonies that don't already appear elsewhere on
 // this page, shown as a collage beside the closing call to action.
+// Deliberately mixed shapes and slight rotations so the group reads as a
+// scattered set of prints rather than a tidy grid.
 const ctaCollage = [
-  { src: "/images/jane-24.jpg", alt: "Jane walking down the aisle at a garden ceremony" },
-  { src: "/images/jane-28.jpg", alt: "Jane handing a reading to a guest at an outdoor ceremony" },
-  { src: "/images/jane-27.jpg", alt: "Jane walking towards the venue entrance" },
-  { src: "/images/jane-26.jpg", alt: "Chairs set out on the lawn for an outdoor ceremony" },
+  { src: "/images/jane-24.jpg", alt: "Jane walking down the aisle at a garden ceremony", shape: "aspect-[3/4]", tilt: "-rotate-2" },
+  { src: "/images/jane-22.jpg", alt: "A couple kissing at the end of their outdoor wedding ceremony", shape: "aspect-[4/3]", tilt: "rotate-1" },
+  { src: "/images/jane-27.jpg", alt: "Jane walking towards the venue entrance", shape: "aspect-[4/5]", tilt: "rotate-2" },
+  { src: "/images/jane-28.jpg", alt: "Jane handing a reading to a guest at an outdoor ceremony", shape: "aspect-[4/5]", tilt: "rotate-1" },
+  { src: "/images/jane-26.jpg", alt: "Chairs set out on the lawn for an outdoor ceremony", shape: "aspect-[3/4]", tilt: "-rotate-1" },
+  { src: "/images/jane-23.jpg", alt: "Jane planning a ceremony with a client", shape: "aspect-[4/3]", tilt: "-rotate-2" },
 ];
 
 export default function Home() {
@@ -199,21 +202,39 @@ export default function Home() {
             {services.map((service, i) => (
               <ScrollReveal key={service.title} delay={i * 80}>
                 <Link href={service.href} className="group block h-full">
-                  <div className="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition-shadow h-full flex flex-col">
-                    <div className="relative aspect-[4/3] overflow-hidden">
-                      <Image
-                        src={service.image}
-                        alt={service.title}
-                        fill
-                        className={`object-cover group-hover:scale-105 transition-transform duration-500${service.objectPosition ? ` ${service.objectPosition}` : ""}`}
-                        sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
-                      />
-                    </div>
-                    <div className="p-6 flex flex-col flex-1">
-                      <h3 className="font-serif text-xl text-[#2C2826] mb-3">
+                  <div
+                    className={`rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition-shadow h-full flex flex-col ${
+                      service.image ? "bg-white" : "bg-[#EEF4EF]"
+                    }`}
+                  >
+                    {service.image && (
+                      <div className="relative aspect-[4/3] overflow-hidden">
+                        <Image
+                          src={service.image}
+                          alt={service.title}
+                          fill
+                          className={`object-cover group-hover:scale-105 transition-transform duration-500${service.objectPosition ? ` ${service.objectPosition}` : ""}`}
+                          sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                        />
+                      </div>
+                    )}
+                    <div
+                      className={`p-6 flex flex-col flex-1 ${
+                        service.image ? "" : "justify-center p-8"
+                      }`}
+                    >
+                      <h3
+                        className={`font-serif text-[#2C2826] mb-3 ${
+                          service.image ? "text-xl" : "text-2xl"
+                        }`}
+                      >
                         {service.title}
                       </h3>
-                      <p className="text-sm text-[#6B6460] leading-relaxed flex-1">
+                      <p
+                        className={`text-sm text-[#6B6460] leading-relaxed ${
+                          service.image ? "flex-1" : ""
+                        }`}
+                      >
                         {service.description}
                       </p>
                       <p className="mt-4 text-sm text-[#7A9E80] font-medium group-hover:text-[#587060] transition-colors flex items-center gap-1">
@@ -307,19 +328,22 @@ export default function Home() {
               </p>
               <Link
                 href="/contact"
-                className="inline-block px-10 py-4 bg-[#C4A05C] text-white font-medium rounded-full hover:bg-[#A8854A] transition-colors"
+                className="inline-flex items-center gap-2.5 px-10 py-4 bg-[#C4A05C] text-white font-medium rounded-full hover:bg-[#A8854A] transition-colors"
               >
+                <svg className="w-5 h-5 flex-shrink-0" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                  <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.71.306 1.263.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z" />
+                </svg>
                 Get in touch by WhatsApp
               </Link>
             </ScrollReveal>
 
             {/* Collage */}
             <ScrollReveal delay={150}>
-              <div className="grid grid-cols-2 gap-4">
+              <div className="columns-2 gap-5 px-2">
                 {ctaCollage.map((img) => (
                   <div
                     key={img.src}
-                    className="relative aspect-[3/4] rounded-2xl overflow-hidden shadow-lg"
+                    className={`relative ${img.shape} ${img.tilt} mb-5 break-inside-avoid rounded-2xl overflow-hidden shadow-xl ring-1 ring-black/5 transition-transform duration-300 hover:rotate-0`}
                   >
                     <Image
                       src={img.src}
